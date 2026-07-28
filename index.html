@@ -249,6 +249,21 @@
 #playButton:hover {
     background:#ff6a00;
 }
+    .buttons {
+    display:flex;
+    gap:10px;
+}
+
+
+.buttons button {
+    background:#ff9500;
+    color:black;
+    border:none;
+    border-radius:5px;
+    padding:8px 12px;
+    cursor:pointer;
+    font-weight:bold;
+}
   </style>
 </head>
 <body>
@@ -323,7 +338,10 @@
                 <span id="duration">0:00</span>
             </div>
 
-            <button id="playButton">▶ Play</button>
+            <div class="buttons">
+                <button id="skipButton">⏭</button>
+                <button id="playButton">▶ Play</button>
+            </div>
         </div>
 
     </div>
