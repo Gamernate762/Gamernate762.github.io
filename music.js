@@ -92,24 +92,25 @@ const game = document.getElementById("gameTitle");
 const art = document.getElementById("albumArt");
 const button = document.getElementById("playButton");
 
+const skipButton = document.getElementById("skipButton");
+
+const progress = document.getElementById("progress");
+const current = document.getElementById("currentTime");
+const duration = document.getElementById("duration");
+
+
 let currentSong;
 
 
-function loadRandomSong(){
-
-    let lastSong = -1;
-
+let lastSong = -1;
 
 function loadRandomSong(){
 
     let newSong;
 
     do {
-        newSong =
-        Math.floor(Math.random()*songs.length);
-
+        newSong = Math.floor(Math.random() * songs.length);
     } while(newSong === lastSong);
-
 
     lastSong = newSong;
 
@@ -120,13 +121,6 @@ function loadRandomSong(){
     title.textContent = currentSong.title;
     game.textContent = currentSong.game;
     art.src = currentSong.image;
-}
-
-    audio.src=currentSong.file;
-
-    title.textContent=currentSong.title;
-    game.textContent=currentSong.game;
-    art.src=currentSong.image;
 
 }
 
@@ -190,8 +184,10 @@ function formatTime(seconds){
 
 }
 
-audio.onended = loadRandomSong;
-
+audio.onended = () => {
+    loadRandomSong();
+    audio.play();
+};
 
 loadRandomSong();
 
