@@ -99,8 +99,6 @@ const duration = document.getElementById("duration");
 
 
 let currentSong;
-
-
 let lastSong = -1;
 
 function loadRandomSong(){
@@ -121,7 +119,6 @@ function loadRandomSong(){
     title.textContent = currentSong.title;
     game.textContent = currentSong.game;
     art.src = currentSong.image;
-
 }
 
 
