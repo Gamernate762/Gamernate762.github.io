@@ -97,8 +97,30 @@ let currentSong;
 
 function loadRandomSong(){
 
-    currentSong =
-    songs[Math.floor(Math.random()*songs.length)];
+    let lastSong = -1;
+
+
+function loadRandomSong(){
+
+    let newSong;
+
+    do {
+        newSong =
+        Math.floor(Math.random()*songs.length);
+
+    } while(newSong === lastSong);
+
+
+    lastSong = newSong;
+
+    currentSong = songs[newSong];
+
+    audio.src = currentSong.file;
+
+    title.textContent = currentSong.title;
+    game.textContent = currentSong.game;
+    art.src = currentSong.image;
+}
 
     audio.src=currentSong.file;
 
@@ -119,9 +141,54 @@ button.onclick = () => {
         audio.pause();
         button.textContent="▶ Play";
     }
+};
+
+skipButton.onclick = () => {
+
+    audio.pause();
+
+    loadRandomSong();
+
+    audio.currentTime = 0;
+
+    audio.play();
+
+    button.textContent = "⏸ Pause";
 
 };
 
+audio.addEventListener("timeupdate", () => {
+
+    if (!audio.duration) return;
+
+    const percent =
+        (audio.currentTime / audio.duration) * 100;
+
+    progress.style.width = percent + "%";
+
+    current.textContent =
+        formatTime(audio.currentTime);
+
+    duration.textContent =
+        formatTime(audio.duration);
+
+});
+
+
+function formatTime(seconds){
+
+    if (isNaN(seconds)) return "0:00";
+
+    const minutes = Math.floor(seconds / 60);
+
+    const secondsLeft =
+        Math.floor(seconds % 60)
+            .toString()
+            .padStart(2, "0");
+
+    return `${minutes}:${secondsLeft}`;
+
+}
 
 audio.onended = loadRandomSong;
 
@@ -140,4 +207,8 @@ document.querySelectorAll("a").forEach(link => {
         audio.pause();
         audio.currentTime = 0;
     });
+});
+window.addEventListener("pagehide", () => {
+    audio.pause();
+    audio.currentTime = 0;
 });
