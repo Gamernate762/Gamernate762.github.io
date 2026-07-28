@@ -93,7 +93,6 @@ const art = document.getElementById("albumArt");
 const button = document.getElementById("playButton");
 
 const skipButton = document.getElementById("skipButton");
-
 const progress = document.getElementById("progress");
 const current = document.getElementById("currentTime");
 const duration = document.getElementById("duration");
@@ -110,7 +109,8 @@ function loadRandomSong(){
 
     do {
         newSong = Math.floor(Math.random() * songs.length);
-    } while(newSong === lastSong);
+    }
+    while(newSong === lastSong);
 
     lastSong = newSong;
 
