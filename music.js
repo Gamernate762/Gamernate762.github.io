@@ -1,11 +1,5 @@
 const songs = [
     {
-        title:"Another Medium",
-        game:"Undertale / Toby Fox",
-        file:"music/AnotherMedium.ogg",
-        image:"images/undertale.jpg"
-    },
-    {
         title:"Here We Are",
         game:"Undertale / Toby Fox",
         file:"music/HereWeAre.ogg",
@@ -36,12 +30,6 @@ const songs = [
         image:"images/deltarune.png"
     },
     {
-        title:"TV Time!",
-        game:"Deltarune ch3 / Toby Fox",
-        file:"music/tvtime.ogg",
-        image:"images/deltarune.png"
-    },
-    {
         title:"Dark Sanctuary",
         game:"Deltarune ch4 / Toby Fox",
         file:"music/ch4_credits.ogg",
@@ -51,12 +39,6 @@ const songs = [
         title:"Festival",
         game:"Deltarune ch5 / Toby Fox",
         file:"music/festival.ogg",
-        image:"images/deltarune.png"
-    },
-    {
-        title:"Welcome to the Green Room",
-        game:"Deltarune ch3 / Toby Fox",
-        file:"music/greenroo_detune.ogg",
         image:"images/deltarune.png"
     },
     {
