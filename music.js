@@ -61,3 +61,17 @@ audio.onended = loadRandomSong;
 
 
 loadRandomSong();
+
+// Stop music when leaving the page
+window.addEventListener("beforeunload", () => {
+    audio.pause();
+    audio.currentTime = 0;
+});
+
+// Stop music when clicking links
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+});
