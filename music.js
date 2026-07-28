@@ -1,21 +1,87 @@
 const songs = [
     {
-        title:"Hopes and Dreams",
-        game:"Undertale",
-        file:"music/hopes_and_dreams.mp3",
-        image:"images/undertale.png"
+        title:"Another Medium",
+        game:"Undertale / Toby Fox",
+        file:"music/AnotherMedium.ogg",
+        image:"images/undertale.jpg"
     },
     {
-        title:"Field of Hopes and Dreams",
-        game:"Deltarune",
-        file:"music/field_of_hopes.mp3",
+        title:"Here We Are",
+        game:"Undertale / Toby Fox",
+        file:"music/HereWeAre.ogg",
+        image:"images/undertale.jpg"
+    },
+    {
+        title:"Hotel",
+        game:"Undertale / Toby Fox",
+        file:"music/Hotel.ogg",
+        image:"images/undertale.jpg"
+    },
+    {
+        title:"Uwa!! So Temperate",
+        game:"Undertale / Toby Fox",
+        file:"music/UwaSoTemperate.ogg",
+        image:"images/undertale.jpg"
+    },
+    {
+        title:"sans.",
+        game:"Undertale / Toby Fox",
+        file:"music/sans.ogg",
+        image:"images/undertale.jpg"
+    },
+    {
+        title:"My Castle Town",
+        game:"Deltarune ch1 / Toby Fox",
+        file:"music/castletown.ogg",
         image:"images/deltarune.png"
     },
     {
-        title:"Sweden",
-        game:"Minecraft",
-        file:"music/sweden.mp3",
-        image:"images/minecraft.png"
+        title:"TV Time!",
+        game:"Deltarune ch3 / Toby Fox",
+        file:"music/tvtime.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"Dark Sanctuary",
+        game:"Deltarune ch4 / Toby Fox",
+        file:"music/ch4_credits.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"Festival",
+        game:"Deltarune ch5 / Toby Fox",
+        file:"music/festival.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"Welcome to the Green Room",
+        game:"Deltarune ch3 / Toby Fox",
+        file:"music/greenroo_detune.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"Hip Shop",
+        game:"Deltarune ch1 / Toby Fox",
+        file:"music/hip_shop.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"The Place Where It Rained",
+        game:"Deltarune ch4 / Toby Fox",
+        file:"music/rain.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"Lantern",
+        game:"Deltarune ch1 / Toby Fox",
+        file:"music/shop1.ogg",
+        image:"images/deltarune.png"
+    },
+    {
+        title:"TV World",
+        game:"Deltarune ch3 / Toby Fox",
+        file:"music/tv_world.ogg",
+        image:"images/deltarune.png"
     }
 ];
 
